@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE school
+	[
+		<!ELEMENT school (students|instructors)+>
+		<!ELEMENT students (student)+>
+		<!ELEMENT student (fname|years|phone)+>
+		<!ATTLIST student StudentCode CDATA #REQUIRED>
+		<!ELEMENT fname (#PCDATA)>
+		<!ELEMENT years (#PCDATA)>
+		<!ELEMENT phone (#PCDATA)>
+		<!ELEMENT instructors (instructor)+>
+		<!ATTLIST instructor  instructorCode CDATA #REQUIRED>
+		<!ELEMENT instructor (car|fname_i|phone_i)+>
+		<!ELEMENT car (mark|type)+>
+		<!ELEMENT fname_i (#PCDATA)>
+		<!ELEMENT phone_i (#PCDATA)>
+		<!ELEMENT mark (#PCDATA)>
+		<!ELEMENT type (#PCDATA)>
+	]>

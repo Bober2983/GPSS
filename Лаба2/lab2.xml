@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE school
+	[
+		<!ELEMENT school (students|instructors)+>
+		<!ELEMENT students (student)+>
+		<!ELEMENT student (fname|years|phone)+>
+		<!ATTLIST student StudentCode CDATA #REQUIRED>
+		<!ELEMENT fname (#PCDATA)>
+		<!ELEMENT years (#PCDATA)>
+		<!ELEMENT phone (#PCDATA)>
+		<!ELEMENT instructors (instructor)+>
+		<!ATTLIST instructor  instructorCode CDATA #REQUIRED>
+		<!ELEMENT instructor (car|fname_i|phone_i)+>
+		<!ELEMENT car (mark|type)+>
+		<!ELEMENT fname_i (#PCDATA)>
+		<!ELEMENT phone_i (#PCDATA)>
+		<!ELEMENT mark (#PCDATA)>
+		<!ELEMENT type (#PCDATA)>
+	]>
+
+<school>
+	<students>
+		<student StudentCode='1'>
+			<fname>Губарев Иван Владимирович</fname>
+			<years>25.07.1992</years>
+			<phone>89152547628</phone>
+		</student>
+		<student StudentCode='2'>
+			<fname>Иванов Кирилл Викторович</fname>
+			<years>14.02.1993</years>
+			<phone>89264897825</phone>
+		</student>
+		<student StudentCode='3'>
+			<fname>Жеров Лев Альбертович</fname>
+			<years>05.01.1989</years>
+			<phone>89100022479</phone>
+		</student>
+	</students>
+	<instructors>
+		<instructor instructorCode='1'>
+			<fname_i>Светлан Козлов Валерьевич</fname_i>
+			<phone_i>8336255259</phone_i>
+			<car>
+				<mark>Nisan</mark>
+				<type>Mechanics</type>
+			</car>
+		</instructor>
+		<instructor instructorCode='2'>
+			<fname_i>Трофим Кондратьев Вадимович</fname_i>
+			<phone_i>8765738073</phone_i>
+			<car>
+				<mark>Lada</mark>
+				<type>Mechanics</type>
+			</car>
+		</instructor>
+		<instructor instructorCode='3'>
+			<fname_i>Ким Бирюков Юрьевич</fname_i>
+			<phone_i>8221994831</phone_i>
+			<car>
+				<mark>BMW</mark>
+				<type>Machine</type>
+			</car>
+		</instructor>			
+	</instructors>
+</school>	
